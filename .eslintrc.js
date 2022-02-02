@@ -24,7 +24,7 @@ module.exports = {
 			jsx: true
 		},
 		ecmaVersion: 2020,
-		sourceType: "module",
+		sourceType: "module"
 	},
 
 	plugins: [
@@ -95,4 +95,4 @@ module.exports = {
 			}
 		]
 	}
-}
+};
