@@ -2,6 +2,10 @@
 	"name": "eslint-config-chariz",
 	"version": "1.0.0",
 	"description": "ESLint config used at Chariz",
+	"author": "Aarnav Tale <tale@chariz.com>",
+	"contributors": [
+		"Adam Demasi <adam@chariz.com>"
+	],
 	"main": "dist/.eslintrc.js",
 	"module": "dist/.eslintrc.mjs",
 	"exports": {
@@ -10,9 +14,10 @@
 			"require": "./.eslintrc.js"
 		}
 	},
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/chariz/eslint.git"
+	"license": "Apache-2.0",
+	"scripts": {
+		"push": "np",
+		"prepublishOnly": "tsup ./.eslintrc.js --format cjs,esm --clean"
 	},
 	"keywords": [
 		"eslint",
@@ -32,23 +37,20 @@
 		"es8",
 		"ecma"
 	],
-	"author": "Aarnav Tale <tale@chariz.com>",
-	"contributors": [
-		"Adam Demasi <adam@chariz.com>"
-	],
-	"license": "Apache-2.0",
-	"homepage": "https://github.com/chariz/eslint#readme",
-	"scripts": {
-		"push": "np",
-		"prepublishOnly": "tsup ./.eslintrc.js --format cjs,esm --clean"
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/chariz/eslint.git"
 	},
+	"bugs": {
+		"url": "https://github.com/chariz/eslint/issues"
+	},
+	"homepage": "https://github.com/chariz/eslint#readme",
 	"dependencies": {
 		"@typescript-eslint/eslint-plugin": "^5.10.1",
 		"@typescript-eslint/parser": "^5.10.1",
 		"eslint": "^8.7.0",
 		"eslint-config-preact": "^1.3.0",
-		"eslint-plugin-react": "^7.28.0",
-		"jest": "^27.4.7"
+		"eslint-plugin-react": "^7.28.0"
 	},
 	"peerDependencies": {
 		"eslint": ">= 8",
