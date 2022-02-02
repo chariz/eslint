@@ -1,3 +1,4 @@
+/** @type {import("eslint").Linter.Config} */
 module.exports = {
 	env: {
 		browser: true,
@@ -27,17 +28,11 @@ module.exports = {
 		sourceType: "module"
 	},
 
-	plugins: [
-		"react",
-		"@typescript-eslint"
-	],
+	plugins: ["react", "@typescript-eslint"],
 
 	rules: {
 		"array-callback-return": "error",
-		"comma-dangle": [
-			"error",
-			"never"
-		],
+		"comma-dangle": ["error", "never"],
 
 		eqeqeq: [
 			"error",
@@ -75,9 +70,7 @@ module.exports = {
 				ignoreChainWithDepth: 1
 			}
 		],
-		"object-shorthand": [
-			"error", "always"
-		],
+		"object-shorthand": ["error", "always"],
 		"prefer-const": "off",
 		"no-var": "error",
 		"no-unused-vars": "off",
@@ -88,10 +81,7 @@ module.exports = {
 		"react/no-unknown-property": [
 			"error",
 			{
-				ignore: [
-					"class",
-					"for"
-				]
+				ignore: ["class", "for"]
 			}
 		]
 	}
