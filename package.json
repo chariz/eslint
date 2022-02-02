@@ -6,12 +6,12 @@
 	"contributors": [
 		"Adam Demasi <adam@chariz.com>"
 	],
-	"main": "dist/.eslintrc.js",
-	"module": "dist/.eslintrc.mjs",
+	"main": "./dist/.eslintrc.js",
+	"module": "./dist/.eslintrc.mjs",
 	"exports": {
 		".": {
-			"import": "./.eslintrc.mjs",
-			"require": "./.eslintrc.js"
+			"import": "./dist/.eslintrc.mjs",
+			"require": "./dist/.eslintrc.js"
 		}
 	},
 	"license": "Apache-2.0",
