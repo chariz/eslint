@@ -16,7 +16,7 @@
 	},
 	"license": "Apache-2.0",
 	"scripts": {
-		"push": "np",
+		"push": "np --no-tests",
 		"prepublishOnly": "tsup ./.eslintrc.js --format cjs,esm --clean"
 	},
 	"keywords": [
