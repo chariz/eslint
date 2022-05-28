@@ -70,5 +70,13 @@
 	},
 	"optionalDependencies": {
 		"jest": "*"
+	},
+	"pnpm": {
+		"peerDependencyRules": {
+			"ignoreMissing": [
+				"@babel/plugin-syntax-flow",
+				"@babel/plugin-transform-react-jsx"
+			]
+		}
 	}
 }
