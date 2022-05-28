@@ -45,7 +45,7 @@ module.exports = {
 		"no-useless-return": "error",
 		"no-var": "error",
 		"object-shorthand": ["error", "always"],
-		"prefer-const": "off",
+		"prefer-const": "error",
 		"prefer-template": "error",
 		quotes: ["error", "double", { allowTemplateLiterals: true }],
 		semi: ["error", "always", { omitLastInOneLineBlock: true }],
