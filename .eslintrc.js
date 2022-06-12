@@ -10,8 +10,10 @@ module.exports = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
-		"react-app",
 		"preact",
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime",
+		"plugin:react-hooks/recommended",
 		"plugin:unicorn/all"
 	],
 
@@ -31,7 +33,7 @@ module.exports = {
 		sourceType: "module"
 	},
 
-	plugins: ["react", "unicorn", "@typescript-eslint"],
+	plugins: ["react", "react-hooks", "simple-import-sort", "unicorn", "@typescript-eslint"],
 
 	rules: {
 		"array-callback-return": "error",
