@@ -18,7 +18,7 @@
 	"scripts": {
 		"lint": "eslint --ext .js,.jsx,.ts,.tsx .eslintrc.js",
 		"lint:fix": "pnpm -s lint -- --fix",
-		"push": "np",
+		"push": "np --no-cleanup --no-tests --message \"chore: v%s\"",
 		"prepublishOnly": "tsup ./.eslintrc.js --format cjs,esm --clean",
 		"test": "pnpm -s lint"
 	},
