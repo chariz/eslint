@@ -10,7 +10,6 @@ module.exports = {
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
-		"preact",
 		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
 		"plugin:react-hooks/recommended",
