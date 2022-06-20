@@ -4,6 +4,7 @@ module.exports = {
 	env: {
 		browser: true,
 		es6: true,
+		es2022: true,
 		node: true,
 		"jest/globals": true
 	},
@@ -31,7 +32,7 @@ module.exports = {
 		ecmaFeatures: {
 			jsx: true
 		},
-		ecmaVersion: 2020,
+		ecmaVersion: 2022,
 		sourceType: "module"
 	},
 
