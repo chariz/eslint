@@ -5,14 +5,12 @@ module.exports = {
 		browser: true,
 		es6: true,
 		es2022: true,
-		node: true,
-		"jest/globals": true
+		node: true
 	},
 
 	extends: [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/eslint-recommended",
-		"plugin:jest/all",
 		"plugin:jsx-a11y/strict",
 		"plugin:react/recommended",
 		"plugin:react/jsx-runtime",
@@ -26,6 +24,18 @@ module.exports = {
 		SharedArrayBuffer: "readonly",
 		$: "readonly"
 	},
+
+	overrides: [
+		{
+			files: ["test/**", "**/*.test.{,c,m}{j,t}s{,x}"],
+
+			env: {
+				"jest/globals": true
+			},
+
+			extends: "plugin:jest/all"
+		}
+	],
 
 	parser: require.resolve("@typescript-eslint/parser"),
 	parserOptions: {
