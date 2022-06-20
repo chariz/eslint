@@ -45,6 +45,9 @@ module.exports = {
 		indent: ["error", "tab", { SwitchCase: 1, offsetTernaryExpressions: true }],
 		"newline-per-chained-call": ["error", { ignoreChainWithDepth: 1 }],
 		"no-implicit-coercion": "error",
+		// Disabling because this false-positives a lot when using spaces to align things. It’s too
+		// noisy to use an eslint disable comment every time this gets in the way.
+		"no-mixed-spaces-and-tabs": "off",
 		"no-spaced-func": "off",
 		"no-unused-vars": "off",
 		"no-useless-return": "error",
