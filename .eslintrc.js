@@ -36,7 +36,7 @@ module.exports = {
 		sourceType: "module"
 	},
 
-	plugins: ["react", "react-hooks", "simple-import-sort", "unicorn", "@typescript-eslint"],
+	plugins: ["simple-import-sort"],
 
 	rules: {
 		"array-callback-return": "error",
@@ -53,19 +53,12 @@ module.exports = {
 		"no-useless-return": "error",
 		"no-var": "error",
 		"object-shorthand": ["error", "always"],
-		"prefer-const": ["error", {
-			destructuring: "all"
-		}],
+		"prefer-const": ["error", { destructuring: "all" }],
 		"prefer-template": "error",
 		quotes: ["error", "double", { allowTemplateLiterals: true }],
 		semi: ["error", "always", { omitLastInOneLineBlock: true }],
 		"import/no-anonymous-default-export": "off",
-		"react/no-unknown-property": [
-			"error",
-			{
-				ignore: ["class", "for"]
-			}
-		],
+		"react/no-unknown-property": ["error", { ignore: ["class", "for"] }],
 		"unicorn/consistent-function-scoping": "off",
 		"unicorn/custom-error-definition": "off",
 		"unicorn/filename-case": [
@@ -75,7 +68,7 @@ module.exports = {
 					pascalCase: true,
 					kebabCase: true
 				},
-				ignore: ["API", "ID", "IP", "PDF", "URL"]
+				ignore: ["API", "ID", "IP", "PDF", "URL", "OMG", "WTF", "BBQ"]
 			}
 		],
 		"unicorn/no-array-callback-reference": "off",
@@ -85,12 +78,7 @@ module.exports = {
 		"unicorn/no-static-only-class": "off",
 		// TODO: This rule is confusing. What am I meant to fix?
 		"unicorn/no-unsafe-regex": "off",
-		"unicorn/no-useless-undefined": [
-			"error",
-			{
-				checkArguments: false
-			}
-		],
+		"unicorn/no-useless-undefined": ["error", { checkArguments: false }],
 		"unicorn/prefer-node-protocol": "off",
 		"unicorn/prevent-abbreviations": "off"
 	}
