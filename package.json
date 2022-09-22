@@ -29,6 +29,8 @@
 		"react",
 		"preact",
 		"typescript",
+		"es2022",
+		"es2021",
 		"es2020",
 		"es2019",
 		"es2018",
@@ -37,8 +39,7 @@
 		"es2015",
 		"es6",
 		"es7",
-		"es8",
-		"ecma"
+		"es8"
 	],
 	"repository": {
 		"type": "git",
@@ -49,24 +50,22 @@
 	},
 	"homepage": "https://github.com/chariz/eslint#readme",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.28.0",
-		"@typescript-eslint/parser": "^5.28.0",
-		"eslint": "^8.18.0",
-		"eslint-plugin-jest": "^26.5.3",
-		"eslint-plugin-jsx-a11y": "^6.5.1",
-		"eslint-plugin-react": "^7.30.0",
+		"@typescript-eslint/eslint-plugin": "^5.38.0",
+		"@typescript-eslint/parser": "^5.38.0",
+		"eslint": "^8.23.1",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-react": "^7.31.8",
 		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-simple-import-sort": "^7.0.0",
-		"eslint-plugin-unicorn": "^42.0.0"
+		"eslint-plugin-simple-import-sort": "^8.0.0",
+		"eslint-plugin-unicorn": "^43.0.2"
 	},
 	"peerDependencies": {
 		"eslint": ">= 8",
 		"typescript": "*"
 	},
 	"devDependencies": {
-		"@types/eslint": "^8.4.3",
-		"np": "^7.6.1",
-		"tsup": "^6.1.2",
-		"typescript": "^4.7.4"
+		"@types/eslint": "^8.4.6",
+		"np": "^7.6.2",
+		"typescript": "^4.8.3"
 	}
 }

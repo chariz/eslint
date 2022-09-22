@@ -25,19 +25,7 @@ module.exports = {
 		$: "readonly"
 	},
 
-	overrides: [
-		{
-			files: ["test/**", "**/*.test.{,c,m}{j,t}s{,x}"],
-
-			env: {
-				"jest/globals": true
-			},
-
-			extends: "plugin:jest/all"
-		}
-	],
-
-	parser: require.resolve("@typescript-eslint/parser"),
+	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		ecmaFeatures: {
 			jsx: true
@@ -46,7 +34,13 @@ module.exports = {
 		sourceType: "module"
 	},
 
-	plugins: ["simple-import-sort"],
+	plugins: [
+		"react",
+		"react-hooks",
+		"simple-import-sort",
+		"unicorn",
+		"@typescript-eslint"
+	],
 
 	rules: {
 		"array-bracket-newline": ["error", "consistent"],
@@ -116,7 +110,8 @@ module.exports = {
 			{
 				cases: {
 					pascalCase: true,
-					kebabCase: true
+					kebabCase: true,
+					camelCase: true
 				},
 				ignore: ["API", "ID", "IP", "PDF", "URL", "OMG", "WTF", "BBQ"]
 			}
@@ -134,12 +129,8 @@ module.exports = {
 	},
 
 	settings: {
-		jest: {
-			version: "28"
-		},
-
 		react: {
-			version: "latest"
+			version: "18"
 		}
 	}
 };
