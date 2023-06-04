@@ -41,6 +41,9 @@
 		"es7",
 		"es8"
 	],
+	"engines": {
+		"node": ">=12"
+	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/chariz/eslint.git"
