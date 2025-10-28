@@ -1,25 +1,27 @@
 {
 	"name": "eslint-config-chariz",
 	"version": "1.6.0",
+	"type": "module",
 	"description": "ESLint config used at Chariz",
-	"author": "Aarnav Tale <tale@chariz.com>",
+	"author": "Adam Demasi <adam@chariz.com>",
 	"contributors": [
-		"Adam Demasi <adam@chariz.com>"
+		"Aarnav Tale <tale@chariz.com>"
 	],
-	"main": "./dist/.eslintrc.js",
-	"module": "./dist/.eslintrc.mjs",
+	"main": "./dist/index.cjs",
+	"module": "./dist/index.js",
+	"types": "./index.d.ts",
 	"exports": {
 		".": {
-			"import": "./dist/.eslintrc.mjs",
-			"require": "./dist/.eslintrc.js"
+			"import": "./dist/index.js",
+			"require": "./dist/index.cjs"
 		}
 	},
 	"license": "Apache-2.0",
 	"scripts": {
-		"lint": "eslint --ext .js,.jsx,.ts,.tsx .eslintrc.js",
-		"lint:fix": "pnpm -s lint -- --fix",
+		"lint": "eslint *.js",
+		"lint:fix": "eslint --fix *.js",
 		"push": "np --no-cleanup --no-tests --message \"chore: v%s\"",
-		"prepublishOnly": "tsup ./.eslintrc.js --format cjs,esm --clean",
+		"prepublishOnly": "tsup *.js --format cjs,esm --clean",
 		"test": "pnpm -s lint"
 	},
 	"keywords": [
@@ -29,6 +31,10 @@
 		"react",
 		"preact",
 		"typescript",
+		"es2026",
+		"es2025",
+		"es2024",
+		"es2023",
 		"es2022",
 		"es2021",
 		"es2020",
@@ -42,7 +48,7 @@
 		"es8"
 	],
 	"engines": {
-		"node": ">=12"
+		"node": ">=22"
 	},
 	"repository": {
 		"type": "git",
@@ -53,23 +59,26 @@
 	},
 	"homepage": "https://github.com/chariz/eslint#readme",
 	"dependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.59.8",
-		"@typescript-eslint/parser": "^5.59.8",
-		"eslint": "^8.42.0",
-		"eslint-plugin-jsx-a11y": "^6.7.1",
-		"eslint-plugin-react": "^7.32.2",
-		"eslint-plugin-react-hooks": "^4.6.0",
-		"eslint-plugin-simple-import-sort": "^10.0.0",
-		"eslint-plugin-unicorn": "^47.0.0"
+		"@eslint/js": "^9.38.0",
+		"eslint": "^9.38.0",
+		"eslint-plugin-jsx-a11y": "^6.10.2",
+		"eslint-plugin-react": "^7.37.5",
+		"eslint-plugin-react-hooks": "^7.0.1",
+		"eslint-plugin-simple-import-sort": "^12.1.1",
+		"eslint-plugin-unicorn": "^62.0.0",
+		"eslint-plugin-vue": "^10.5.1",
+		"globals": "^16.4.0",
+		"typescript-eslint": "^8.46.2",
+		"vue-eslint-parser": "^10.2.0"
 	},
 	"peerDependencies": {
-		"eslint": ">= 8",
+		"eslint": ">=9",
 		"typescript": "*"
 	},
 	"devDependencies": {
-		"@types/eslint": "^8.40.0",
-		"np": "^8.0.2",
-		"tsup": "^6.7.0",
-		"typescript": "^5.1.3"
+		"@types/eslint": "^9.6.1",
+		"np": "^10.2.0",
+		"tsup": "^8.5.0",
+		"typescript": "^5.9.3"
 	}
 }
