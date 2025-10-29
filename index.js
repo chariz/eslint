@@ -45,7 +45,7 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 			files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}", "!**/.nuxt/**/*"],
 
 			languageOptions: {
-				ecmaVersion: 2026,
+				ecmaVersion: "latest",
 				sourceType: "module",
 				globals: {
 					...globals.builtin,
