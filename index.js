@@ -9,7 +9,7 @@ import reactHooks from "eslint-plugin-react-hooks";
 import tsEslint from "typescript-eslint";
 import unicorn from "eslint-plugin-unicorn";
 
-export default function ({ react = false, vue = false, node = true, browser = true }) {
+export default function ({ react = false, vue = false, node = true, browser = true } = {}) {
 	return defineConfig([
 		// Base JS
 		js.configs.recommended,
