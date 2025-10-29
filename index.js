@@ -9,14 +9,18 @@ import reactHooks from "eslint-plugin-react-hooks";
 import tsEslint from "typescript-eslint";
 import unicorn from "eslint-plugin-unicorn";
 
-export default function ({ react = false, vue = false, node = true, browser = true } = {}) {
+export default function ({ ts = true, react = false, vue = false, node = true, browser = true } = {}) {
 	return defineConfig([
 		// Base JS
 		js.configs.recommended,
 
 		// TypeScript
-		tsEslint.configs.strict,
-		tsEslint.configs.stylistic,
+		ts
+			? [
+					tsEslint.configs.strict,
+					tsEslint.configs.stylistic
+				]
+			: [],
 
 		// React
 		react
@@ -67,10 +71,6 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 			},
 
 			rules: {
-				"@typescript-eslint/no-non-null-assertion": "off",
-				// Has a lot of false positives, tsc catches this anyway
-				"@typescript-eslint/no-unused-vars": "off",
-
 				"array-bracket-newline": ["error", "consistent"],
 				"array-bracket-spacing": ["error", "never"],
 				"array-callback-return": "error",
@@ -152,6 +152,17 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 				"unicorn/switch-case-braces": ["error", "avoid"]
 			}
 		},
+
+		// TypeScript
+		ts
+			? {
+					rules: {
+						"@typescript-eslint/no-non-null-assertion": "off",
+						// Has a lot of false positives, tsc catches this anyway
+						"@typescript-eslint/no-unused-vars": "off"
+					}
+				}
+			: {},
 
 		// React/Vue
 		react || vue
