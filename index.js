@@ -42,6 +42,7 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 
 		// Our config
 		{
+			name: "eslint-config-chariz/main",
 			files: ["**/*.{js,jsx,mjs,cjs,ts,tsx}", "!**/.nuxt/**/*"],
 
 			languageOptions: {
@@ -155,6 +156,7 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 		// React/Vue
 		react || vue
 			? {
+					name: "eslint-config-chariz/jsx",
 					files: ["**/*.{jsx,tsx,vue}"],
 
 					languageOptions: {
@@ -169,6 +171,7 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 
 		react
 			? {
+					name: "eslint-config-chariz/react",
 					files: ["**/*.{jsx,tsx}"],
 
 					settings: {
@@ -185,6 +188,7 @@ export default function ({ react = false, vue = false, node = true, browser = tr
 
 		vue
 			? {
+					name: "eslint-config-chariz/vue",
 					files: ["**/*.vue"],
 
 					rules: {
